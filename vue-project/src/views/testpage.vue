@@ -1,5 +1,7 @@
+<script setup>
+import Techpage from '../components/icons/TechPage.vue'
+</script>
+
 <template>
-  <div>
-    <h1>hello this is a test, i think</h1>
-  </div>
+  <Techpage />
 </template>
