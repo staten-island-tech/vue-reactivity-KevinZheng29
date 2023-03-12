@@ -1,7 +1,11 @@
 <template>
   <header>
-    <div>
-      <img src="testcharacter.jpg" alt="" />
-    </div>
+    <div></div>
   </header>
 </template>
+
+<script>
+export default {}
+</script>
+
+<style scoped></style>

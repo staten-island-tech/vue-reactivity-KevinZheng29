@@ -4,36 +4,29 @@ import CurrentCharacter from '../components/icons/CurrentCharacter.vue'
 </script>
 
 <template>
-  <div class="parent">
-    <div class="modifypage">
-      <div>
-        <DesignOption />
-        <nav>
-          <RouterLink to="/about">about</RouterLink>
-        </nav>
-      </div>
+  <div class="characterpage">
+    <div class="displayed">
+      <CurrentCharacter />
     </div>
-    <div class="characterpage">
-      <div>
-        <CurrentCharacter />
-      </div>
+  </div>
+  <div class="modifypage">
+    <div>
+      <DesignOption />
     </div>
   </div>
 </template>
 
 <style scoped>
-.parent {
-  display: flex;
+.displayed {
+  text-align: center;
 }
-
 .modifypage {
+  border: 2px solid black;
   background-image: url(https://i.pinimg.com/originals/c1/33/70/c133707cc0f9c97d7869917b084da190.jpg);
-  width: 65%;
-  height: 1000px;
+  height: 600px;
 }
 .characterpage {
   background-color: aquamarine;
-  width: 35%;
-  height: 1000px;
+  height: 250px;
 }
 </style>
