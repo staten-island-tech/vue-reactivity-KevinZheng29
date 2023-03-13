@@ -1,11 +1,11 @@
 <template>
   <div>
     <img
-      v-on:click="test"
       class="img"
       v-for="image in characterlink"
       :src="image.IMG"
       :alt="image.alt"
+      v-on:click="test(image)"
     />
   </div>
 </template>
@@ -27,7 +27,10 @@ export default {
           Character: 3,
           IMG: 'https://thumbs.gfycat.com/FaintSkinnyFowl-max-1mb.gif'
         }
-      ]
+      ],
+      test: function (data) {
+        console.log(data.Character)
+      }
     }
   }
 }
