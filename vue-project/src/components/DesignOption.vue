@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="currentcharacter">
     <img
       class="img"
       v-for="image in characterlink"
@@ -37,12 +37,12 @@ export default {
 </script>
 
 <style scoped>
-div {
+.currentcharacter {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
-img {
+.img {
   width: 200px;
   height: 200px;
 }
