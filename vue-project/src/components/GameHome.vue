@@ -28,9 +28,10 @@ export default {
 <template>
   <div class="characterpage">
     <div class="displayed">
-      <h1>
-        {{ namei }}
-      </h1>
+      <img
+        class="testimg"
+        src="https://orig00.deviantart.net/2ec1/f/2016/310/2/1/link_pixel_art_32_bit_by_knightbruh-dampj2t.gif"
+      />
     </div>
   </div>
   <div class="modifypage">
@@ -44,6 +45,7 @@ export default {
           v-on:click="test(image)"
         />
       </div>
+      <h1></h1>
     </div>
   </div>
 </template>
@@ -68,6 +70,11 @@ export default {
   justify-content: space-around;
 }
 .img {
+  width: 200px;
+  height: 200px;
+}
+
+.testimg {
   width: 200px;
   height: 200px;
 }
