@@ -27,7 +27,11 @@ export default {
 
 <template>
   <div class="characterpage">
-    <div class="displayed"></div>
+    <div class="displayed">
+      <h1>
+        {{ namei }}
+      </h1>
+    </div>
   </div>
   <div class="modifypage">
     <div>
