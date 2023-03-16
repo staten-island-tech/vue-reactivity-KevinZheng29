@@ -27,12 +27,7 @@ export default {
 
 <template>
   <div class="characterpage">
-    <div class="displayed">
-      <img
-        class="testimg"
-        src="https://orig00.deviantart.net/2ec1/f/2016/310/2/1/link_pixel_art_32_bit_by_knightbruh-dampj2t.gif"
-      />
-    </div>
+    <div class="displayed"></div>
   </div>
   <div class="modifypage">
     <div>
