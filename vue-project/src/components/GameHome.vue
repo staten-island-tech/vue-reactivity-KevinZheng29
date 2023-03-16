@@ -16,10 +16,13 @@ export default {
           IMG: 'https://thumbs.gfycat.com/FaintSkinnyFowl-max-1mb.gif'
         }
       ],
-      test: function (data) {
-        let currentcharacter = data.IMG
-        console.log(currentcharacter)
-      }
+      currentcharacter: 'feijefiefjk'
+    }
+  },
+  methods: {
+    test: function (data) {
+      let currentcharacter = data.IMG
+      console.log(currentcharacter)
     }
   }
 }
@@ -27,7 +30,9 @@ export default {
 
 <template>
   <div class="characterpage">
-    <div class="displayed"></div>
+    <div class="displayed">
+      <h1>{{ currentcharacter }}</h1>
+    </div>
   </div>
   <div class="modifypage">
     <div>
