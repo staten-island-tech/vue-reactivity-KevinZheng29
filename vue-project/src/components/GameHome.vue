@@ -1,4 +1,5 @@
 <script>
+import { ref } from 'vue'
 export default {
   data() {
     return {
@@ -21,7 +22,7 @@ export default {
   },
   methods: {
     test: function (data) {
-      let currentcharacter = data.IMG
+      this.currentcharacter = data.IMG
       console.log(currentcharacter)
     }
   }
