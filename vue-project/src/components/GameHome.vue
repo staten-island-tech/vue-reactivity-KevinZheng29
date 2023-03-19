@@ -18,19 +18,11 @@ export default {
         },
         {
           Character: 4,
-          IMG: 'https://thumbs.gfycat.com/FaintSkinnyFowl-max-1mb.gif'
+          IMG: 'https://orig00.deviantart.net/9fb3/f/2013/210/a/f/sonic_16_bit__gif__by_fulanit0-d6fso2y.png'
         },
         {
           Character: 5,
-          IMG: 'https://thumbs.gfycat.com/FaintSkinnyFowl-max-1mb.gif'
-        },
-        {
-          Character: 6,
-          IMG: 'https://thumbs.gfycat.com/FaintSkinnyFowl-max-1mb.gif'
-        },
-        {
-          Character: 7,
-          IMG: 'https://thumbs.gfycat.com/FaintSkinnyFowl-max-1mb.gif'
+          IMG: 'https://th.bing.com/th/id/R.9453b20048f675f9764026f97eda2222?rik=XLvreeTbd%2fkhVQ&riu=http%3a%2f%2fwww.clipartbest.com%2fcliparts%2facq%2fLKG%2facqLKGAzi.gif&ehk=q1ewa%2fIm1GmAS8SlG4i32VUKxAGWQwykeAIQIC2NL7o%3d&risl=&pid=ImgRaw&r=0'
         }
       ],
       currentcharacter:
@@ -40,7 +32,6 @@ export default {
   methods: {
     test: function (data) {
       this.currentcharacter = data.IMG
-      console.log(this.currentcharacter)
     }
   }
 }
@@ -63,7 +54,6 @@ export default {
           v-on:click="test(image)"
         />
       </div>
-      <h1></h1>
     </div>
   </div>
 </template>
@@ -89,6 +79,7 @@ export default {
 .choosecharacter {
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
 }
 .img {
   width: 200px;
