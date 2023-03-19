@@ -19,6 +19,18 @@ export default {
         {
           Character: 4,
           IMG: 'https://thumbs.gfycat.com/FaintSkinnyFowl-max-1mb.gif'
+        },
+        {
+          Character: 5,
+          IMG: 'https://thumbs.gfycat.com/FaintSkinnyFowl-max-1mb.gif'
+        },
+        {
+          Character: 6,
+          IMG: 'https://thumbs.gfycat.com/FaintSkinnyFowl-max-1mb.gif'
+        },
+        {
+          Character: 7,
+          IMG: 'https://thumbs.gfycat.com/FaintSkinnyFowl-max-1mb.gif'
         }
       ],
       currentcharacter:
@@ -77,8 +89,6 @@ export default {
 .choosecharacter {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
-  width: 33%;
 }
 .img {
   width: 200px;
