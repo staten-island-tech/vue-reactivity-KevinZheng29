@@ -15,15 +15,20 @@ export default {
         {
           Character: 3,
           IMG: 'https://thumbs.gfycat.com/FaintSkinnyFowl-max-1mb.gif'
+        },
+        {
+          Character: 4,
+          IMG: 'https://thumbs.gfycat.com/FaintSkinnyFowl-max-1mb.gif'
         }
       ],
-      currentcharacter: 'feijefiefjk'
+      currentcharacter:
+        'https://th.bing.com/th/id/R.bb75d09bce90bd1eef9b69fc34cb02b3?rik=YgLpsYw65dCbsg&riu=http%3a%2f%2fmedia.giphy.com%2fmedia%2f19z865XUHqTcs%2fgiphy.gif&ehk=fpm2SWYOpP18S0CxqjtBgqkgGRNMg2qWR9W5nYK7Qmc%3d&risl=&pid=ImgRaw&r=0'
     }
   },
   methods: {
     test: function (data) {
       this.currentcharacter = data.IMG
-      console.log(currentcharacter)
+      console.log(this.currentcharacter)
     }
   }
 }
@@ -32,7 +37,7 @@ export default {
 <template>
   <div class="characterpage">
     <div class="displayed">
-      <h1>{{ currentcharacter }}</h1>
+      <img class="currentcharacter" :src="currentcharacter" :alt="currentcharacter.alt" />
     </div>
   </div>
   <div class="modifypage">
@@ -55,6 +60,10 @@ export default {
 .displayed {
   text-align: center;
 }
+.currentcharacter {
+  width: 180px;
+  height: 180px;
+}
 .modifypage {
   border: 2px solid black;
   background-image: url(https://i.pinimg.com/originals/c1/33/70/c133707cc0f9c97d7869917b084da190.jpg);
@@ -68,7 +77,8 @@ export default {
 .choosecharacter {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  width: 33%;
 }
 .img {
   width: 200px;
