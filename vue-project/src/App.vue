@@ -6,7 +6,9 @@ import GameHome from '../src/views/GameHome.vue'
 <script setup></script>
 
 <template>
-  <div></div>
+  <div>
+    <RouterLink to="/character">Select Character </RouterLink>
+  </div>
   <GameHome />
   <RouterView />
 </template>
