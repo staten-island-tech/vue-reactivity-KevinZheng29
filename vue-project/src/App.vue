@@ -7,10 +7,19 @@ import GameHome from '../src/views/GameHome.vue'
 
 <template>
   <div>
-    <RouterLink to="/character">Select Character </RouterLink>
+    <RouterLink class="btn" to="/character">Select Character </RouterLink>
+    <RouterLink class="btn" to="/playgame">Play Game</RouterLink>
   </div>
-  <GameHome />
+
   <RouterView />
 </template>
 
-<style scoped></style>
+<style scoped>
+.btn {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+div {
+  text-align: center;
+}
+</style>
