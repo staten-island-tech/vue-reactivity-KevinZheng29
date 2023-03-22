@@ -1,21 +1,7 @@
-<script>
-import data from '../views/GameHome.vue'
-export default {
-  components: {
-    data
-  },
-  methods: {
-    test: function () {
-      console.log(data.data().currentcharacter)
-    }
-  }
-}
-</script>
+<script></script>
 
 <template>
-  <div class="background">
-    <h1 v-on:click="test()">djeifnef</h1>
-  </div>
+  <div class="background"></div>
 </template>
 
 <style scoped>
