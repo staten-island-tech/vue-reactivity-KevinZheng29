@@ -30,8 +30,9 @@ export default {
     }
   },
   methods: {
-    test: function (data) {
+    test(data) {
       this.currentcharacter = data.IMG
+      this.$emit('updatecharacter', 'hellooooo')
     }
   }
 }
