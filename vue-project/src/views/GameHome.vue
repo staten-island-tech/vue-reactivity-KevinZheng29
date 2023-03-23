@@ -1,5 +1,6 @@
 <script>
 import { ref } from 'vue'
+import { store } from '../store/store.js'
 export default {
   data() {
     return {
@@ -25,14 +26,14 @@ export default {
           IMG: 'https://th.bing.com/th/id/R.9453b20048f675f9764026f97eda2222?rik=XLvreeTbd%2fkhVQ&riu=http%3a%2f%2fwww.clipartbest.com%2fcliparts%2facq%2fLKG%2facqLKGAzi.gif&ehk=q1ewa%2fIm1GmAS8SlG4i32VUKxAGWQwykeAIQIC2NL7o%3d&risl=&pid=ImgRaw&r=0'
         }
       ],
-      currentcharacter:
-        'https://th.bing.com/th/id/R.bb75d09bce90bd1eef9b69fc34cb02b3?rik=YgLpsYw65dCbsg&riu=http%3a%2f%2fmedia.giphy.com%2fmedia%2f19z865XUHqTcs%2fgiphy.gif&ehk=fpm2SWYOpP18S0CxqjtBgqkgGRNMg2qWR9W5nYK7Qmc%3d&risl=&pid=ImgRaw&r=0'
+      store
     }
   },
   methods: {
     test(data) {
-      this.currentcharacter = data.IMG
-      this.$emit('updatecharacter', 'hellooooo')
+      this.store.character = data.IMG
+      this.$emit('updatecharacter ', 'hellooooo')
+      console.log(this.currentcharacter)
     }
   }
 }
@@ -41,7 +42,7 @@ export default {
 <template>
   <div class="characterpage">
     <div class="displayed">
-      <img class="currentcharacter" :src="currentcharacter" :alt="currentcharacter.alt" />
+      <img class="currentcharacter" :src="this.store.character" :alt="this.store.character.alt" />
     </div>
   </div>
   <div class="modifypage">

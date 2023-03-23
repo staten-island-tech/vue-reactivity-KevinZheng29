@@ -11,12 +11,6 @@ export default {
   },
   components: { GameHome, PlayGame },
   methods: {
-    playgame: function () {
-      this.page = 'playgame'
-    },
-    selectcharacter: function () {
-      this.page = 'select'
-    },
     updatecharacter: function (data) {
       this.chosencharacter = data
       console.log(data)
@@ -27,16 +21,8 @@ export default {
 
 <template>
   <div>
-    <button @click="selectcharacter()">Select Character</button>
-    <button @click="playgame(), updatecharacter($event)">Play Game</button>
-  </div>
-  <div>
-    <div v-if="page === 'select'">
-      <GameHome />
-    </div>
-    <div v-if="page === 'playgame'">
-      <PlayGame character="testrn" />
-    </div>
+    <RouterLink class="router" to="/character">Select</RouterLink>
+    <RouterLink class="router" to="/playgame">Play</RouterLink>
   </div>
 
   <RouterView />
@@ -49,5 +35,9 @@ export default {
 }
 div {
   text-align: center;
+}
+.router {
+  margin-left: 20px;
+  margin-right: 20px;
 }
 </style>
