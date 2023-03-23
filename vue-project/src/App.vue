@@ -2,27 +2,23 @@
 import { RouterLink, RouterView } from 'vue-router'
 import GameHome from './views/GameHome.vue'
 import PlayGame from './views/PlayGame.vue'
+import { store } from './store/store.js'
 export default {
   data() {
     return {
-      page: 'select',
-      chosencharacter: ''
+      store,
+      test: 'this is a test'
     }
   },
   components: { GameHome, PlayGame },
-  methods: {
-    updatecharacter: function (data) {
-      this.chosencharacter = data
-      console.log(data)
-    }
-  }
+  methods: {}
 }
 </script>
 
 <template>
   <div>
     <RouterLink class="router" to="/character">Select</RouterLink>
-    <RouterLink class="router" to="/playgame">Play</RouterLink>
+    <RouterLink class="router" :to="{ path: '/playgame' }">Play</RouterLink>
   </div>
 
   <RouterView />

@@ -32,8 +32,6 @@ export default {
   methods: {
     test(data) {
       this.store.character = data.IMG
-      this.$emit('updatecharacter ', 'hellooooo')
-      console.log(this.currentcharacter)
     }
   }
 }

@@ -1,12 +1,18 @@
 <script>
+import { store } from '../store/store.js'
 export default {
-  props: ['character']
+  props: ['character'],
+  data() {
+    return {
+      store
+    }
+  }
 }
 </script>
 
 <template>
   <div class="background">
-    <h1>{{ character }}</h1>
+    <img class="img" :src="this.store.character" :alt="this.store.character.alt" />
   </div>
 </template>
 
@@ -15,5 +21,10 @@ export default {
   background-color: lightblue;
   width: 100%;
   height: 800px;
+}
+
+.img {
+  width: 200px;
+  height: 200px;
 }
 </style>
