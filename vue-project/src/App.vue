@@ -6,8 +6,7 @@ import { store } from './store/store.js'
 export default {
   data() {
     return {
-      store,
-      test: 'this is a test'
+      store
     }
   },
   components: { GameHome, PlayGame },
@@ -16,7 +15,8 @@ export default {
 </script>
 
 <template>
-  <div>
+  <div class="btnpage">
+    <RouterLink class="router" to="/">Home</RouterLink>
     <RouterLink class="router" to="/character">Select</RouterLink>
     <RouterLink class="router" :to="{ path: '/playgame' }">Play</RouterLink>
   </div>
@@ -25,12 +25,9 @@ export default {
 </template>
 
 <style scoped>
-.btn {
-  margin-left: 10px;
-  margin-right: 10px;
-}
-div {
+.btnpage {
   text-align: center;
+  margin-bottom: 20px;
 }
 .router {
   margin-left: 20px;

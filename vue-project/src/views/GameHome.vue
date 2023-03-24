@@ -38,27 +38,32 @@ export default {
 </script>
 
 <template>
-  <div class="characterpage">
-    <div class="displayed">
-      <img class="currentcharacter" :src="this.store.character" :alt="this.store.character.alt" />
+  <div class="wholepage">
+    <div class="characterpage">
+      <div class="displayed">
+        <img class="currentcharacter" :src="this.store.character" :alt="this.store.character.alt" />
+      </div>
     </div>
-  </div>
-  <div class="modifypage">
-    <div>
-      <div class="choosecharacter">
-        <img
-          class="img"
-          v-for="image in characterlink"
-          :src="image.IMG"
-          :alt="image.alt"
-          v-on:click="test(image)"
-        />
+    <div class="modifypage">
+      <div>
+        <div class="choosecharacter">
+          <img
+            class="img"
+            v-for="image in characterlink"
+            :src="image.IMG"
+            :alt="image.alt"
+            v-on:click="test(image)"
+          />
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <style scoped>
+.wholepage {
+  border: 3px solid black;
+}
 .displayed {
   text-align: center;
 }

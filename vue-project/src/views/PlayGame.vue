@@ -21,10 +21,11 @@ export default {
   background-color: lightblue;
   width: 100%;
   height: 800px;
+  border: solid 3px black;
 }
 
 .img {
-  width: 200px;
-  height: 200px;
+  width: 180px;
+  height: 180px;
 }
 </style>
