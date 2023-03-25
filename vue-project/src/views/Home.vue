@@ -2,17 +2,18 @@
 export default {
   data() {
     return {
-      page: 'tutorial'
+      page: 'home'
     }
   },
   methods: {
     tutorialpage() {
-      this.page === 'tutorial'
-      console.log('hello')
+      this.page = 'tutorial'
     },
     rulepage() {
-      this.page === 'rule'
-      console.log('hello')
+      this.page = 'rulepage'
+    },
+    returnback() {
+      this.page = 'home'
     }
   }
 }
@@ -20,36 +21,59 @@ export default {
 
 <template>
   <div class="homepage">
-    <section>
-      <div class="intro">
-        <h1>some game</h1>
-        <div class="btnpage">
-          <button @click="tutorialpage()">Control</button>
-          <button @click="rulepage()">Rules</button>
+    <div v-if="page === 'home'">
+      <h1 style="font-size: 80px; text-align: center">Welcome to _________</h1>
+      <div class="btnpage">
+        <button class="homepagebtn" @click="tutorialpage()">Control</button>
+        <button class="homepagebtn" @click="rulepage()">Rules</button>
+      </div>
+    </div>
+    <div v-if="page === 'tutorial'">
+      <button class="otherpagebtn" @click="returnback()">Back</button>
+      <div class="tutorialpage">
+        <h1 class="title">Control</h1>
+        <div class="toh">
+          <h1>↑ Up</h1>
+          <h1>↓ Down</h1>
         </div>
       </div>
-      <div class="subsection">
-        <div v-if="page === 'tutorial'">
-          <h1>this is a tutorial</h1>
-        </div>
-        <div v-if="page === 'rule'">
-          <h1>rule page</h1>
+    </div>
+    <div v-if="page === 'rulepage'">
+      <button class="otherpagebtn" @click="returnback()">Back</button>
+      <div class="rulepage">
+        <h1 class="title">Rules:</h1>
+        <div class="toh">
+          <h1>1. There is no rule</h1>
         </div>
       </div>
-    </section>
+    </div>
   </div>
 </template>
 <style scoped>
-button {
+.title {
+  font-size: 50px;
+}
+.homepagebtn {
+  background-color: transparent;
+  border: 3px solid black;
+  font-size: 60px;
+  width: 20%;
+  margin: 150px 10px 0px 10px;
+}
+.btnpage {
+  text-align: center;
+}
+.toh {
+  margin-left: 20px;
+}
+
+.otherpagebtn {
   background-color: transparent;
   border: 3px solid black;
   font-size: 30px;
-  margin-top: 30px;
   width: 20%;
-}
-.btnpage {
-  display: flex;
-  flex-direction: column;
+  margin-top: 50px;
+  margin-left: 10px;
 }
 .homepage {
   width: 100%;
@@ -57,22 +81,6 @@ button {
   border: 3px solid black;
   background-image: url(https://cdnb.artstation.com/p/assets/images/images/029/413/443/large/sarah-clark-environment.jpg?1597452779);
   background-size: cover;
-}
-section {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-.intro,
-.subsection {
-  border: 3px solid black;
-  height: 795px;
-}
-.intro {
-  width: 40%;
-}
-.subsection {
-  width: 60%;
 }
 </style>
 <script setup></script>

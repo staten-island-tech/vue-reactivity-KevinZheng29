@@ -27,7 +27,8 @@ export default {
 <style scoped>
 .btnpage {
   text-align: center;
-  margin-bottom: 20px;
+  height: 40px;
+  font-size: 20px;
 }
 .router {
   margin-left: 20px;
