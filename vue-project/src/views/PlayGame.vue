@@ -18,7 +18,8 @@ export default {
 
 <style scoped>
 .background {
-  background-color: lightblue;
+  background-image: url(https://cdn.gamedevmarket.net/wp-content/uploads/20191203165317/8657cfcd9a0aa1149a40988c4686478c.png);
+  background-size: contain;
   width: 100%;
   height: 800px;
   border: solid 3px black;
@@ -27,5 +28,6 @@ export default {
 .img {
   width: 180px;
   height: 180px;
+  margin-top: 39%;
 }
 </style>

@@ -22,7 +22,7 @@ export default {
 <template>
   <div class="homepage">
     <div v-if="page === 'home'">
-      <h1 style="font-size: 80px; text-align: center">Welcome to _________</h1>
+      <h1 style="font-size: 80px; text-align: center">some project</h1>
       <div class="btnpage">
         <button class="homepagebtn" @click="tutorialpage()">Control</button>
         <button class="homepagebtn" @click="rulepage()">Rules</button>
