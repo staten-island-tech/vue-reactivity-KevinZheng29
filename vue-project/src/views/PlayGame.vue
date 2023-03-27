@@ -1,18 +1,28 @@
 <script>
 import { store } from '../store/store.js'
 export default {
-  props: ['character'],
   data() {
     return {
-      store
+      store,
+      sprite: document.querySelector('.img')
+    }
+  },
+  methods: {
+    movedown() {
+      console.log('hi')
     }
   }
 }
 </script>
-
 <template>
   <div class="background">
-    <img class="img" :src="this.store.character" :alt="this.store.character.alt" />
+    <img
+      v-on:keydown="movedown()"
+      draggable="false"
+      class="img"
+      :src="this.store.character"
+      :alt="this.store.character.alt"
+    />
   </div>
 </template>
 
@@ -28,6 +38,6 @@ export default {
 .img {
   width: 180px;
   height: 180px;
-  margin-top: 39%;
+  margin-top: 30%;
 }
 </style>

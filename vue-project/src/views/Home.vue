@@ -1,4 +1,6 @@
 <script>
+import rulepage from '../components/rulepage.vue'
+import tutorial from '../components/tutorialpage.vue'
 export default {
   data() {
     return {
@@ -15,6 +17,10 @@ export default {
     returnback() {
       this.page = 'home'
     }
+  },
+  components: {
+    rulepage,
+    tutorial
   }
 }
 </script>
@@ -30,29 +36,15 @@ export default {
     </div>
     <div v-if="page === 'tutorial'">
       <button class="otherpagebtn" @click="returnback()">Back</button>
-      <div class="tutorialpage">
-        <h1 class="title">Control</h1>
-        <div class="toh">
-          <h1>↑ Up</h1>
-          <h1>↓ Down</h1>
-        </div>
-      </div>
+      <tutorial />
     </div>
     <div v-if="page === 'rulepage'">
       <button class="otherpagebtn" @click="returnback()">Back</button>
-      <div class="rulepage">
-        <h1 class="title">Rules:</h1>
-        <div class="toh">
-          <h1>1. There is no rule</h1>
-        </div>
-      </div>
+      <rulepage />
     </div>
   </div>
 </template>
 <style scoped>
-.title {
-  font-size: 50px;
-}
 .homepagebtn {
   background-color: transparent;
   border: 3px solid black;
@@ -62,9 +54,6 @@ export default {
 }
 .btnpage {
   text-align: center;
-}
-.toh {
-  margin-left: 20px;
 }
 
 .otherpagebtn {

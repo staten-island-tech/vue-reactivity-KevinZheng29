@@ -41,7 +41,12 @@ export default {
   <div class="wholepage">
     <div class="characterpage">
       <div class="displayed">
-        <img class="currentcharacter" :src="this.store.character" :alt="this.store.character.alt" />
+        <img
+          draggable="false"
+          class="currentcharacter"
+          :src="this.store.character"
+          :alt="this.store.character.alt"
+        />
       </div>
     </div>
     <div class="modifypage">
@@ -49,6 +54,7 @@ export default {
         <div class="choosecharacter">
           <img
             class="img"
+            draggable="false"
             v-for="image in characterlink"
             :src="image.IMG"
             :alt="image.alt"
