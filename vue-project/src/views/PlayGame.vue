@@ -3,26 +3,22 @@ import { store } from '../store/store.js'
 export default {
   data() {
     return {
-      store,
-      sprite: document.querySelector('.img')
+      store
     }
   },
   methods: {
-    movedown() {
-      console.log('hi')
+    movement() {
+      console.log('moving')
     }
+  },
+  beforeMount() {
+    this.movement()
   }
 }
 </script>
 <template>
   <div class="background">
-    <img
-      v-on:keydown="movedown()"
-      draggable="false"
-      class="img"
-      :src="this.store.character"
-      :alt="this.store.character.alt"
-    />
+    <img class="img" :src="this.store.character" :alt="this.store.character.alt" />
   </div>
 </template>
 
