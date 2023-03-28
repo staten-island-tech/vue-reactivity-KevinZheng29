@@ -1,6 +1,15 @@
 <script>
 import { store } from '../store/store.js'
+import { ref } from 'vue'
 export default {
+  setup() {
+    const sprite = ref(document.querySelector('.img'))
+    const anumber = ref(100)
+    return {
+      anumber,
+      sprite
+    }
+  },
   data() {
     return {
       store
@@ -8,11 +17,16 @@ export default {
   },
   methods: {
     movement() {
-      console.log('moving')
+      document.addEventListener('keyup', function () {
+        console.log('entered')
+      })
     }
   },
   beforeMount() {
     this.movement()
+  },
+  mounted() {
+    console.log(this.anumber)
   }
 }
 </script>
