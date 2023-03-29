@@ -4,35 +4,24 @@ import { ref } from 'vue'
 export default {
   setup() {
     const sprite = ref(document.querySelector('.img'))
-    const anumber = ref(100)
     return {
-      anumber,
       sprite
     }
   },
   data() {
     return {
-      store
+      store,
+      somenumber: 1
     }
   },
-  methods: {
-    movement() {
-      document.addEventListener('keyup', function () {
-        console.log('entered')
-      })
-    }
-  },
-  beforeMount() {
-    this.movement()
-  },
-  mounted() {
-    console.log(this.anumber)
-  }
+  methods: {},
+  mounted() {}
 }
 </script>
+
 <template>
   <div class="background">
-    <img class="img" :src="this.store.character" :alt="this.store.character.alt" />
+    <img ref="sprite" class="img" :src="this.store.character" :alt="this.store.character.alt" />
   </div>
 </template>
 
