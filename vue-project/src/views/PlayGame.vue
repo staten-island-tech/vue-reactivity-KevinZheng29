@@ -1,27 +1,29 @@
 <script>
 import { store } from '../store/store.js'
-import { ref } from 'vue'
 export default {
-  setup() {
-    const sprite = ref(document.querySelector('.img'))
-    return {
-      sprite
-    }
-  },
   data() {
     return {
       store,
       somenumber: 1
     }
   },
-  methods: {},
-  mounted() {}
+  methods: {
+    test2: function () {
+      const sprite = document.getElementById('sprite')
+      document.addEventListener('keyup', function (e) {
+        console.log(e.code)
+      })
+    }
+  },
+  mounted() {
+    this.test2()
+  }
 }
 </script>
 
 <template>
-  <div class="background">
-    <img ref="sprite" class="img" :src="this.store.character" :alt="this.store.character.alt" />
+  <div id="background" class="background">
+    <img id="sprite" class="img" :src="this.store.character" :alt="this.store.character.alt" />
   </div>
 </template>
 
